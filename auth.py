@@ -17,20 +17,20 @@ if sys.version_info[0] < 3:
 def login():
       while True:
            try:
-                uname = input('\n\33[34mUsername\033[0m: ')
-                pword = getpass.getpass('\33[34mPassword\033[0m: ')
+                uname = input('\n\33[34musername\033[0m: ')
+                pword = getpass.getpass('\33[34mpassword\033[0m: ')
                 if hashlib.sha3_512(uname.encode('utf-8')).hexdigest() == sha3_512uname and hashlib.sha3_512(pword.encode('utf-8')).hexdigest() == sha3_512pword:
                    os.system('clear')
-                   os.system('printf "Hello "' + uname + '| figlet | lolcat && neofetch') #if you dont like neofetch remove '&& neofetch' 
+                   os.system('printf "Hello "' + uname + '| how are you? new hacking attacks?') #if you dont like neofetch remove '&& neofetch' 
                    break
                 else:
-                      print("\n\033[1;91m\t\t\tWrong Password\n\t\t\tTry again.\n")
+                      print("\n\033[1;91m\t\t\twrong password\n\t\t\tTry again.\n")
                       time.sleep(2)
                       os.system('clear')
            except Exception:
-                      print("\n\033[1;91m\t\tSomething went wrong?\n")
+                      print("\n\033[1;91m\t\tsomething went wrong?\n")
                       time.sleep(2)
                       os.system('clear')
            except KeyboardInterrupt:
-	                  print("\033[1;91m\t\t\tKey not allowed.")
+	                  print("\033[1;91m\t\t\tkey not allowed.")
 login()
